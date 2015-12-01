@@ -378,9 +378,9 @@ class Snapper:
     
         self.create_back_surface()
 
-		with open("message.txt", "r") as f:
-			self.message = f.read()
-			self.message = self.message.strip()
+        with open("message.txt", "r") as f:
+            self.message = f.read()
+            self.message = self.message.strip()
     
     def run(self):
         self.skeleton.main_loop()
@@ -636,9 +636,9 @@ class Snapper:
             self.draw_feedback_bar("Ready!",0,0)            
         else:
             self.draw_points()
-	    if self.message:
-		print self.message
-		self.show_info_text(self.message);
+        if self.message:
+        print self.message
+        self.show_info_text(self.message);
             if self.control_mode == 1:
                 self.draw_feedback_bar("BCI",self.bcibar,self.jsbar)
             elif self.control_mode == 2:
