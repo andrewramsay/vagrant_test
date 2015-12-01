@@ -378,12 +378,9 @@ class Snapper:
     
         self.create_back_surface()
 
-	if os.path.exists("vagrant_test/message.txt"):
-		with open("vagrant_test/message.txt", "r") as f:
+		with open("message.txt", "r") as f:
 			self.message = f.read()
 			self.message = self.message.strip()
-	else:
-		self.message = None
     
     def run(self):
         self.skeleton.main_loop()
