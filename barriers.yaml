@@ -1,0 +1,61 @@
+---
+
+- default: &default
+    image: ~
+    sound: ~
+    points: 0
+    lanespan: 1
+    visible: Yes
+    collision-remove: Yes
+    jump: 0
+    swivel: 0
+    msg: ~
+    
+
+- coin: &coin
+    <<: *default
+    image: coin.png
+    sound: coin.wav
+    jump: 1
+    msg: coin
+    points: 1
+    
+
+   
+- bigcoin:
+    <<: *coin    
+    lanespan: 2
+    image: bigcoin.png
+    
+- barrier: &barrier
+    <<: *default
+    image: barrier.png
+    sound: barrier.wav
+    msg: barrier
+    swivel: 50
+    points: -1
+
+
+- bigbarrier:
+    <<: *barrier
+    lanespan: 2
+    image: bigbarrier.png
+    
+    
+- startline:
+    <<: *default
+    image: startline.png
+    sound: startline.wav
+    msg: start
+    lanespan: 6
+    collision-remove: Yes
+    
+    
+- finishline:
+    <<: *default
+    image: finishline.png
+    sound: finishline.wav
+    lanespan: 6
+    msg: finish
+    collision-remove: Yes
+    
