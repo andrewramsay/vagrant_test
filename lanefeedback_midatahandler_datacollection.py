@@ -637,8 +637,9 @@ class Snapper:
         else:
             self.draw_points()
         if self.message:
-        print self.message
-        self.show_info_text(self.message);
+            print self.message
+            self.show_info_text(self.message);
+
             if self.control_mode == 1:
                 self.draw_feedback_bar("BCI",self.bcibar,self.jsbar)
             elif self.control_mode == 2:
